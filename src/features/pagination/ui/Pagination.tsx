@@ -54,7 +54,7 @@ export function Pagination({ totalPages }: PaginationProps) {
       <button
         onClick={() => handlePageClick(currentPage - 1)}
         disabled={currentPage === 1 || isPending}
-        className="px-4 py-2 max-md:px-2 max-md:py-1 max-md:text-sm rounded bg-gray-200 disabled:opacity-50 disabled:cursor-auto cursor-pointer not-disabled:active:bg-gray-300 transition-colors"
+        className="px-4 py-2 max-md:px-2 max-md:py-1 max-md:text-sm min-w-7 rounded bg-gray-200 disabled:opacity-50 disabled:cursor-auto cursor-pointer not-disabled:active:bg-gray-300 transition-colors"
       >
         &lt;
       </button>
@@ -69,7 +69,7 @@ export function Pagination({ totalPages }: PaginationProps) {
             key={page}
             onClick={() => handlePageClick(page as number)}
             disabled={isPending}
-            className={`px-4 py-2 max-md:px-1 max-md:py-1 max-md:text-sm rounded cursor-pointer transition-colors ${
+            className={`px-4 py-2 max-md:px-1 max-md:py-1 min-w-7 max-md:text-sm rounded cursor-pointer transition-colors ${
               currentPage === page ? 'bg-blue-600 text-white active:bg-blue-700' : 'bg-gray-200 active:bg-gray-300'
             } ${isPending ? 'opacity-50 cursor-wait' : ''}`}
           >
@@ -81,7 +81,7 @@ export function Pagination({ totalPages }: PaginationProps) {
       <button
         onClick={() => handlePageClick(currentPage + 1)}
         disabled={currentPage === totalPages || isPending}
-        className="px-4 py-2 max-md:px-2 max-md:py-1 max-md:text-sm rounded bg-gray-200 disabled:opacity-50 disabled:cursor-auto cursor-pointer not-disabled:active:bg-gray-300 transition-colors"
+        className="px-4 py-2 max-md:px-2 max-md:py-1 max-md:text-sm min-w-7 rounded bg-gray-200 disabled:opacity-50 disabled:cursor-auto cursor-pointer not-disabled:active:bg-gray-300 transition-colors"
       >
         &gt;
       </button>

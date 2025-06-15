@@ -14,11 +14,11 @@ export function CarSorting() {
     });
   };
 
-  const buttons = [null, 'asc', 'desc'] as SortOrder[];
+  const buttons = ['asc', 'desc', null] as SortOrder[];
 
   return (
     <div className="mb-6">
-      <div className="flex gap-4 max-md:gap-2 max-sm:flex-col sx:border border-green-500">
+      <div className="flex gap-4 max-md:gap-2 max-sm:flex-wrap">
         {buttons.map((b) => (
           <Button
             key={b}
